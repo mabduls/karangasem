@@ -59,7 +59,11 @@ class PostResource extends Resource
                     ->label('Gambar')
                     ->image()
                     ->directory('posts')
-                    ->imageEditor()
+                    ->imageEditor(),
+                TextInput::make('youtube_url')
+                    ->label('YouTube URL')
+                    ->url()
+                    ->nullable()
             ]);
     }
 

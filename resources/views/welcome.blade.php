@@ -69,7 +69,7 @@
         <ul class="h-full grid place-items-center py-20">
             <li><a class="mobile-link hover:text-color-secondary ease-in duration-200 text-xl" href="#home">Home</a></li>
             <li><a class="mobile-link hover:text-color-secondary ease-in duration-200 text-xl" href="#features">Features</a></li>
-            <li><a class="mobile-link hover:text-color-secondary ease-in duration-200 text-xl" href="#contact">Contact</a></li>
+            <li><a class="mobile-link hover:text-color-secondary ease-in duration-200 text-xl" href="#footer">Footer</a></li>
             <li>
                 <a href="{{ route('UserDashboard') }}"><button class="bg-color-secondary px-4 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200 text-xl">Bring It On !!!</button></a>
             </li>

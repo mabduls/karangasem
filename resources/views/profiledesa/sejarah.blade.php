@@ -142,12 +142,12 @@
     <!-- Main Section Start -->
     <section id="sejarah" class="main-section flex items-center justify-center w-full">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
-            <p>Desa Karangasem berasal dari 2 (dua) kata yaitu Karang dan asem.
+            <p class="text-gray-700 mt-2 mb-2">Desa Karangasem berasal dari 2 (dua) kata yaitu Karang dan asem.
                 Yang dimaksud Karang adalah Pekarangan sedangkan asem adalah Pohon Asem.
                 Konon ceritanya Desa Karangasem adalah desa yang tanah pekarangannya banyak
                 ditumbuhi pohon asem maka dinamailah Desa tersebut dengan nama Desa Karangasem.</p>
             <br>
-            <p>Desa Karangasem adalah salah satu Desa di Kecamatan Petarukan Kabupaten Pemalang Propinsi Jawa Tengah
+            <p class="text-gray-700 mt-2 mb-2">Desa Karangasem adalah salah satu Desa di Kecamatan Petarukan Kabupaten Pemalang Propinsi Jawa Tengah
                 yang letaknya berbatasan dengan sebelah utara Desa Sirangkang,sebelah Timur Desa Widodaren,sebelah Selatan
                 Desa Kendalsari dan Sebelah Barat Desa Petanjungan.</p>
         </div>

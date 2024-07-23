@@ -7,10 +7,26 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::latest()->paginate(7);
-        return view('dashboard', compact('posts')); 
+        $category = $request->query('category');
+        $sort = $request->query('sort', 'latest'); 
+
+        $query = Post::query();
+
+        if ($category) {
+            $query->where('category', $category);
+        }
+
+        if ($sort == 'latest') {
+            $query->latest();
+        } else {
+            $query->oldest();
+        }
+
+        $posts = $query->paginate(7);
+
+        return view('dashboard', compact('posts', 'category', 'sort'));
     }
 
     public function show($slug)

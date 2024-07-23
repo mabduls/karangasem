@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog UI</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>{{ $post->title }} - Desa Karangasem</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
+    <!------------------- Navbar Section --------------------------->
     <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -131,29 +132,78 @@
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="relative full-screen">
-            <div class="container py-20">
-                <div class="flex flex-col items-center z-20 md:flex-row">
-                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
-                        <h1 class="text-5xl font-bold mb-4">{{ $post->title }}</h1>
-                        <span class="ml-4 inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
-                        @if($post->image)
-                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
-                        @endif
-                        @if($post->youtube_url)
-                        <div class="mb-4">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        @endif
-                        <div class="mt-2 prose">
-                            {!! $post->body !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Header Section -->
+    <section id="header" class="flex flex-col justify-center items-center bg-gray-100 py-10 w-full">
+        <div class="text-gray-900 text-center">
+            <p class="text-4xl font-bold">Kepemerintahan Desa Karangasem</p>
+            <p class="text-lg text-gray-600 mt-2">Berkembang bersama dengan desa karangasem Kecamatan Petarukan.</p>
+        </div>
+    </section>
+    <!-- Main Section Start -->
+    <section id="sejarah" class="main-section flex items-center justify-center w-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
+            <p class="text-4xl font-bold">Pemerintah Desa.</p>
+            <p class="text-gray-700 mt-2 mb-2">Pemerintah Desa atau disebut juga Pemdes adalah lembaga pemerintah yang
+                bertugas mengelola wilayah tingkat desa. Lembaga ini diatur melalui Peraturan
+                Pemerintah No. 72 Tahun 2005 tentang pemerintahan desa yang diterbitkan untuk
+                melaksanakan ketentuan pasal 216 ayat (1) Undang Undang Nomor 32 Tahun 2004 tentang
+                pemerintahan daerah. Pemimpin pemerintah desa, seperti tertuang dalam
+                paragraf 2 pasal 14 ayat (1), adalah kepala desa yang bertugas menyelenggarakan urusan
+                pemerintahan, pembangunan, dan kemasyarakatan..</p>
+            <p class="text-4xl font-bold mt-5 mb-2">Pemerintah Desa memiliki tugas antara lain : </p>
+            <ul class="text-lg text-gray-700 list-disc list-inside">
+                <li>
+                    <span>Memegang teguh dan mengamalkan Pancasila,
+                        melaksanakan UUD 1945 serta mempertahankan dan memelihara
+                        keutuhan Negara Kesatuan Republik Indonesia.</span>
+                </li>
+                <li>
+                    <span>Meningkatkan kesejahteraan rakyat.</span>
+                </li>
+                <li>
+                    <span>Memelihara ketenteraman dan ketertiban masyarakat.</span>
+                </li>
+                <li>
+                    <span>Melaksanakan kehidupan demokrasi.</span>
+                </li>
+                <li>
+                    <span>Melaksanakan prinsip tata pemerintahan desa
+                        yang bersih dan bebas dari kolusi, korupsi dan nepotisme.</span>
+                </li>
+                <li>
+                    <span>Menjalin hubungan kerja dengan seluruh mitra kerja pemerintahan desa.</span>
+                </li>
+                <li>
+                    <span>Menaati dan menegakkan se luruh peraturan perundang undangan.</span>
+                </li>
+                <li>
+                    <span>Menyelenggarakan administrasi pemerintahan yang baik.</span>
+                </li>
+                <li>
+                    <span>Melaksanakan dan mempertanggungjawabkan pengelolaan keuangan desa.</span>
+                </li>
+                <li>
+                    <span> Melaksanakan urusan yang menjadi kewenangan desa.</span>
+                </li>
+                <li>
+                    <span>Mendamaikan perselisihan masyarakat di desa.</span>
+                </li>
+                <li>
+                    <span>Mengembangkan pendapatan masyarakat dan desa.</span>
+                </li>
+                <li>
+                    <span>Membina, mengayomi dan melestarikan nilai nilai sosial budaya dan adat istiadat.</span>
+                </li>
+                <li>
+                    <span>Memberdayakan masyarakat dan kelembagaan di desa.</span>
+                </li>
+                <li>
+                    <span>Mengembangkan potensi sumber daya alam dan melestarikan lingkungan hidup.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Main Section End -->
 </body>
 
 </html>

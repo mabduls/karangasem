@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->enum('category', ['Sports', 'Agama', 'KKN', 'Kesehatan']);
+            $table->enum('category', ['Olahraga', 'Agama', 'KKN', 'Kesehatan', 'Pendidikan', 'Geografis', 'Organisasi', 'UMKM']);
             $table->text('body');
             $table->string('image')->nullable();
+            $table->string('youtube_url')->nullable();
             $table->timestamps();
         });
     }

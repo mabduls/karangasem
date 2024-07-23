@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog UI</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>{{ $post->title }} - Desa Karangasem</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
+    <!------------------- Navbar Section --------------------------->
     <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -131,29 +132,47 @@
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="relative full-screen">
-            <div class="container py-20">
-                <div class="flex flex-col items-center z-20 md:flex-row">
-                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
-                        <h1 class="text-5xl font-bold mb-4">{{ $post->title }}</h1>
-                        <span class="ml-4 inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
-                        @if($post->image)
-                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
-                        @endif
-                        @if($post->youtube_url)
-                        <div class="mb-4">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        @endif
-                        <div class="mt-2 prose">
-                            {!! $post->body !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Header Section -->
+    <section id="header" class="flex flex-col justify-center items-center bg-gray-100 py-10 w-full">
+        <div class="text-gray-900 text-center">
+            <p class="text-4xl font-bold">LPMD Desa Karangasem</p>
+            <p class="text-lg text-gray-600 mt-2">Berkembang bersama dengan desa karangasem Kecamatan Petarukan.</p>
+        </div>
+    </section>
+    <!-- Main Section Start -->
+    <section id="sejarah" class="main-section flex items-center justify-center w-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
+            <p class="text-4xl font-bold">LEMBAGA PEMBERDAYAAN MASYARAKAT DESA (LPMD).</p>
+            <p class="text-gray-700 mt-2 mb-4">Lembaga Pemberdayaan Masyarakat Desa atau Kelurahan
+                (LPMD/LPMK)/Lembaga Ketahanan Masyarakat Desa atau Kelurahan (LKMDILKMK) atau sebutan
+                nama lain mempunyai tugas menyusun rencana pembangunan secara partisipatif, menggerakkan
+                swadaya gotong royong masyarakat, melaksanakan dan mengendalikan pembangunan.</p>
+            <p class="text-gray-700 mt-2 mb-5">Lembaga Pemberdayaan Masyarakat Desa atau Kelurahan (LPMD/LPMK)/Lembaga
+                Ketahanan Masyarakat Desa atau Kelurahan (LKMD/LKMK) atau sebutan nama lain dalam
+                melaksanakan tugasnya mempunyai fungsi : </p>
+            <ul class="text-lg text-gray-700 list-decimal list-inside">
+                <li>
+                    <span>penampungan dan penyaluran aspirasi masyarakat dalam pembangunan.</span>
+                </li>
+                <li>
+                    <span>penanaman dan pemupukan rasa persatuan dan kesatuan masyarakat dalam kerangka memperkokoh Negara Kesatuan Republik Indonesia.</span>
+                </li>
+                <li>
+                    <span>peningkatan kualitas dan percepatan pelayanan pemerintah kepada masyarakat.</span>
+                </li>
+                <li>
+                    <span>penyusunan rencana, pelaksanaan, pelestarian dan pengembangan hasil-hasil pembangunan secara partisipatif.</span>
+                </li>
+                <li>
+                    <span>penumbuhkembangan dan penggerak prakarsa, partisipasi, serta swadaya gotong royong masyarakat.</span>
+                </li>
+                <li>
+                    <span>penggali, pendayagunaan dan pengembangan potensi sumber daya alam serta keserasian lingkungan hidup.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Main Section End -->
 </body>
 
 </html>

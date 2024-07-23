@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog UI</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>{{ $post->title }} - Desa Karangasem</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
+    <!------------------- Navbar Section --------------------------->
     <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -131,29 +132,74 @@
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="relative full-screen">
-            <div class="container py-20">
-                <div class="flex flex-col items-center z-20 md:flex-row">
-                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
-                        <h1 class="text-5xl font-bold mb-4">{{ $post->title }}</h1>
-                        <span class="ml-4 inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
-                        @if($post->image)
-                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
-                        @endif
-                        @if($post->youtube_url)
-                        <div class="mb-4">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        @endif
-                        <div class="mt-2 prose">
-                            {!! $post->body !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Header Section -->
+    <section id="header" class="flex flex-col justify-center items-center bg-gray-100 py-10 w-full">
+        <div class="text-gray-900 text-center">
+            <p class="text-4xl font-bold">Desa Karangasem</p>
+            <p class="text-lg text-gray-600 mt-2">Berkembang bersama dengan desa karangasem Kecamatan Petarukan.</p>
+        </div>
+    </section>
+    <!-- Main Section Start -->
+    <section id="sejarah" class="main-section flex items-center justify-center w-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
+            <p class="text-xl text-gray-800 mt-5 mb-2">Visi</p>
+            <p class="text-gray-700 mt-2 mb-2">Visi adalah suatu gambaran yang menantang
+                tentang keadaan masa depan yang diinginkan dengan melihat potensi dan kebutuhan desa.
+                Penyusunan Visi Desa Karangasem ini dilakukan dengan pendekatan partisipatif, melibatkan
+                pihak-pihak yang berkepentingan di Desa Karangasem seperti pemerintah desa, BPD, tokoh masyarakat,
+                tokoh agama, lembaga masyarakat desa dan masyarakat desa pada umumnya. Pertimbangan kondisi eksternal
+                di desa seperti satuan kerja wilayah pembangunan di Kecamatan. Maka berdasarkan pertimbangan di atas Visi
+                Desa Karangasem adalah:</p>
+            <p class="text-xl font-bold">TERWUJUDNYA DESA KARANGASEM MANDIRI, SEHAT, AMAN, SEJAHTERA, DAN KARIMAH YANG BERBASIS
+                TEKNOLOGI" YANG BERAKHLAQUL</p>
+            <br>
+            <p class="text-xl text-gray-800 mt-5 mb-2">Misi</p>
+            <p class="text-gray-700 mt-2 mb-2">Misi adalah langkah-langkah yang akan dilakukan guna mewujudkan visi. Sehingga
+                guna mewujudkan visí desa Karangasem, maka telah ditetapkan misi-misi yang memuat sesuatu pernyataan yang harus
+                dilaksanakan oleh desa agar tercapainya visi desa tersebut. Pernyataan visi kemudian dijabarkan ke dalam misi agar
+                dapat di operasionalkan/dikerjakan. Sebagaimana penyusunan visi, misipun dalam penyusunannya menggunakan pendekatan
+                partisipatif dan pertimbangan potensi dan kebutuhan Desa Karangasem, sebagaimana proses yang dilakukan, maka misi Desa
+                Karangasem adalah:</p>
+            <ul class="text-lg text-gray-700 list-decimal list-inside">
+                <li>
+                    <span>Pengembangan Usaha Mikro Kecil dan Menengah berbasis potensi desa.</span>
+                </li>
+                <li>
+                    <span>Peningkatan akses kelembagaan ekonomi lokal untuk menumbuhkan peronomian masyarakat.</span>
+                </li>
+                <li>
+                    <span>Membangun lembaga pengelola dan pengembang ekonomi desa.</span>
+                </li>
+                <li>
+                    <span>Membangun organisasi Usaha Ekonomi Desa dengan pelibatan kelembagaan kemasyarakatan desa.</span>
+                </li>
+                <li>
+                    <span>Pengembangan ekonomi kelompok yang mandiri dan berkembang berbasis Teknologi.</span>
+                </li>
+                <li>
+                    <span>Menciptakan produk unggulan desa yang kreatif, inovatif dan berdaya saing.</span>
+                </li>
+                <li>
+                    <span>Meningkatkan sarana dan prasarana desa penunjang perekonomian masyarakat berbasis Teknologi dan Informasi.</span>
+                </li>
+                <li>
+                    <span>Membuat regulasi desa sebagai jaminan keberlanjutan kegiatan usaha ekonomi.</span>
+                </li>
+                <li>
+                    <span>Mewujudkan masyarakat desa yang kreatif dan inovatif guna menghadapi globalisasi melalui Teknologi dan Informasi.</span>
+                </li>
+                <li>
+                    <span>Pembinaan umat dibidang religius untuk mencapai peningkatan keimanan dan ketahanan masyarakat melalui Teknologi Informasi.</span>
+                </li>
+                <li>
+                    <span>Meningkatkan kualitas sumber daya manusia, khususnya pada bidang penguasaan Teknologi dan Informasi.</span>
+                </li>
+                <li>
+                    <span>Meningkatkan pelayanan masyarakat yang prima, cepat dan berbasis Teknologi dan Informasi.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
