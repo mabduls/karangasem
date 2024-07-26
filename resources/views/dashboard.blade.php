@@ -177,8 +177,25 @@
             @endforeach
         </div>
         <!-- Pagination -->
-        <div class="mt-8">
-            {{ $posts->appends(['category' => $category, 'sort' => $sort])->links() }}
+        <div class="mt-8 flex justify-center items-center space-x-4">
+            <!-- Previous Page Link -->
+            @if ($posts->onFirstPage())
+            <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded cursor-not-allowed">Previous</span>
+            @else
+            <a href="{{ $posts->previousPageUrl() }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Previous</a>
+            @endif
+
+            <!-- Page Numbers -->
+            <span class="px-4 py-2 bg-white text-gray-700 rounded">
+                Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}
+            </span>
+
+            <!-- Next Page Link -->
+            @if ($posts->hasMorePages())
+            <a href="{{ $posts->nextPageUrl() }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Next</a>
+            @else
+            <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded cursor-not-allowed">Next</span>
+            @endif
         </div>
         @else
         <p class="text-gray-700">No posts available.</p>
