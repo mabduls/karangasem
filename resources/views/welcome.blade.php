@@ -32,13 +32,23 @@
             height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            #features {
+                max-height: 100vh;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 
 <body class="bg-color-primary text-color-white tracking-wider">
 
-    <!-------------------------- Header Section --------------------------------------->
     <header>
         <nav class="container flex justify-between items-center py-6 relative">
             <div class="py-5 text-color-secondary font-bold text-4xl">
@@ -57,7 +67,6 @@
                 </ul>
             </div>
 
-            <!-------------------------- Header Mobile Section --------------------------------------->
             <div id="hamburger" class="lg:hidden cursor-pointer z-60">
                 <i class="fa-solid fa-bars text-3xl" id="hamburger-icon"></i>
                 <i class="fa-solid fa-xmark text-3xl hidden" id="close-icon"></i>
@@ -96,7 +105,7 @@
                 <div class="shape-blob fourteen"></div>
                 <div class="shape-blob fifteen"></div>
             </div>
-            <!-------------------------- Home Section --------------------------------------->
+
             <section id="home" class="relative full-screen">
                 <div class="w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
                 <div class="w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
@@ -118,16 +127,14 @@
             </section>
         </section>
 
-        <!-------------------------- features Section --------------------------------------->
         <section id="features" class="bg-color-primary-light full-screen">
-            <div class="container py-20">
-                <div class="text-center m-auto mb-20 md:w-1/2">
+            <div class="container py-20 flex flex-col justify-center">
+                <div class="text-center m-auto mb-20 md:w-1/2 sm:w-full">
                     <h4 class="font-bold text-color-secondary mb-4">Our Features</h4>
                     <h1 class="title text-2xl md:text-4xl">Beragam Pengetahuan Tentang Desa Karangasem</h1>
                 </div>
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
-                    <!-- card number 1 -->
                     <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-calendar-days text-4xl"></i>
@@ -135,7 +142,6 @@
                         <h3 class="text-xl font-bold py-4">Daily Routines</h3>
                         <p class="leading-relaxed">Daily rutinitas yang dilaksanakan di Desa Karangasem Petarukan Pemalang</p>
                     </div>
-                    <!-- card number 2 -->
                     <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-chart-column text-4xl"></i>
@@ -143,7 +149,6 @@
                         <h3 class="text-xl font-bold py-4">Data Statistic</h3>
                         <p class="leading-relaxed">Data statistic yang dimiliki oleh Desa Karangasem Petarukan Pemalang</p>
                     </div>
-                    <!-- card number 3 -->
                     <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200 min-h-[350px] sm:min-h-[370px] md:min-h-[380px]">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-phone text-4xl"></i>
@@ -155,7 +160,6 @@
             </div>
         </section>
 
-        <!-------------------------- footer Section --------------------------------------->
         <section id="footer">
             <div class="bg-color-primary-dark relative">
                 <div class="container py-10">
