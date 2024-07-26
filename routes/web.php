@@ -20,9 +20,6 @@ Route::prefix('profiledesa')->group(function () {
     Route::get('/demografi', function () {
         return view('profiledesa.demografi');
     })->name('demografi');
-    Route::get('/visimisi', function () {
-        return view('profiledesa.visimisi');
-    })->name('visimisi');
 });
 
 // Grouping routes under 'kelembagaan'
@@ -46,6 +43,12 @@ Route::prefix('statistikdesa')->group(function () {
     Route::get('/agama', function () {
         return view('statistikdesa.agama');
     })->name('Agama');
+    Route::get('/pekerjaan', function () {
+        return view('statistikdesa.pekerjaan');
+    })->name('Pekerjaan');
+    Route::get('/pendidikan', function () {
+        return view('statistikdesa.pendidikan');
+    })->name('Pendidikan');
 });
 
 Route::get('/dashboard', [PostController::class, 'index'])->name('UserDashboard');

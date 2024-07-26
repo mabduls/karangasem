@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog UI</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>{{ $post->title }} - Desa Karangasem</title>
 </head>
 
-<body>
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+<body class="bg-gray-100">
+    <!------------------- Navbar Section --------------------------->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('img/pemalang.png') }}" class="h-10" alt="Flowbite Logo" />
@@ -94,23 +95,46 @@
         </div>
     </nav>
 
-    <main class="flex items-center justify-center min-h-screen">
-        <div class="bg-white shadow-lg rounded-lg max-w-2xl mx-auto p-6">
-            <h1 class="text-3xl font-bold mb-4">{{ $post->title }}</h1>
-            <span class="inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
-            @if($post->image)
-            <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
-            @endif
-            @if($post->youtube_url)
-            <div class="mb-4">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
-            </div>
-            @endif
-            <div class="prose">
-                {!! $post->body !!}
-            </div>
+    <!-- Header Section -->
+    <section id="header" class="flex flex-col justify-center items-center bg-gray-100 py-10 w-full">
+        <div class="text-gray-900 text-center">
+            <p class="text-4xl font-bold">Desa Karangasem</p>
+            <p class="text-lg text-gray-600 mt-2">Berkembang bersama dengan desa karangasem Kecamatan Petarukan.</p>
         </div>
-    </main>
+    </section>
+    <!-- Main Section Start -->
+    <section id="sejarah" class="main-section flex items-center justify-center w-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
+            <p class="text-xl text-gray-800 mt-5 mb-2">Pendidikan</p>
+            <p class="text-gray-700 mt-2 mb-2">Jumlah penduduk berdasarkan tingkat pendidikan Umum</p>
+            <ul class="text-lg text-gray-700 list-decimal list-inside">
+                <li class="flex">
+                    <span class="w-40">Taman Kanak-Kanak</span><span>:</span>
+                    <span class="ml-2">56 orang</span>
+                </li>
+                <li class="flex">
+                    <span class="w-40">Sekolah Dasar</span><span>:</span>
+                    <span class="ml-2">1577 orang</span>
+                </li>
+                <li class="flex">
+                    <span class="w-40">SMP / SLTP</span><span>:</span>
+                    <span class="ml-2">881 orang</span>
+                </li>
+                <li class="flex">
+                    <span class="w-40">SMA / SLTA</span><span>:</span>
+                    <span class="ml-2">671 orang</span>
+                </li>
+                <li class="flex">
+                    <span class="w-40">Akademi (D1-D3)</span><span>:</span>
+                    <span class="ml-2">254 orang</span>
+                </li>
+                <li class="flex">
+                    <span class="w-40">Akademi (S1)</span><span>:</span>
+                    <span class="ml-2">254 orang</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>

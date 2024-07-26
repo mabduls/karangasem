@@ -40,10 +40,14 @@ class PostResource extends Resource
                     ->required()
                     ->label('Kategori Berita')
                     ->options([
-                        'Sports' => 'Sports',
+                        'Olahraga' => 'Olahraga',
                         'Agama' => 'Agama',
                         'KKN' => 'KKN',
                         'Kesehatan' => 'Kesehatan',
+                        'Pendidikan' => 'Pendidikan',
+                        'Geografis' => 'Geografis',
+                        'Organisasi' => 'Organisasi',
+                        'UMKM' => 'UMKM',
                     ]),
                 RichEditor::make('body')
                     ->required()
@@ -54,6 +58,15 @@ class PostResource extends Resource
                         'underline',
                         'bulletList',
                         'orderedList',
+                        'link',
+                        'blockquote',
+                        'codeBlock',
+                        'h2',
+                        'h3',
+                        'h4',
+                        'alignLeft',
+                        'alignCenter',
+                        'alignRight',
                     ]),
                 FileUpload::make('image')
                     ->label('Gambar')

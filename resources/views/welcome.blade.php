@@ -111,7 +111,7 @@
                                     Let's Get Started</button></a>
                         </div>
                         <div class="md:w-1/2">
-                            <img src="img/pemalang2.png" alt="">
+                            <img src="img/pemalang2.png" alt="" class="max-w-full h-auto sm:w-1/2 md:w-full">
                         </div>
                     </div>
                 </div>
@@ -123,12 +123,12 @@
             <div class="container py-20">
                 <div class="text-center m-auto mb-20 md:w-1/2">
                     <h4 class="font-bold text-color-secondary mb-4">Our Features</h4>
-                    <h1 class="title">Beragam Pengetahuan Tentang Desa Karangasem</h1>
+                    <h1 class="title text-2xl md:text-4xl">Beragam Pengetahuan Tentang Desa Karangasem</h1>
                 </div>
 
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
                     <!-- card number 1 -->
-                    <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                    <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-calendar-days text-4xl"></i>
                         </div>
@@ -136,20 +136,20 @@
                         <p class="leading-relaxed">Daily rutinitas yang dilaksanakan di Desa Karangasem Petarukan Pemalang</p>
                     </div>
                     <!-- card number 2 -->
-                    <div class="bg-color-primary-dark border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                    <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-chart-column text-4xl"></i>
                         </div>
                         <h3 class="text-xl font-bold py-4">Data Statistic</h3>
-                        <p class="leading-relaxed">Daily rutinitas yang dilaksanakan di Desa Karangasem Petarukan Pemalang</p>
+                        <p class="leading-relaxed">Data statistic yang dimiliki oleh Desa Karangasem Petarukan Pemalang</p>
                     </div>
                     <!-- card number 3 -->
-                    <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                    <div class="border-2 border-solid border-color-gray text-center py-10 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200 min-h-[350px] sm:min-h-[370px] md:min-h-[380px]">
                         <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
                             <i class="fa-solid fa-phone text-4xl"></i>
                         </div>
                         <h3 class="text-xl font-bold py-4">Support 24 hours</h3>
-                        <p class="leading-relaxed">Daily rutinitas yang dilaksanakan di Desa Karangasem Petarukan Pemalang</p>
+                        <p class="leading-relaxed">Support 24 jam yang diberikan oleh Desa Karangasem Petarukan Pemalang</p>
                     </div>
                 </div>
             </div>
