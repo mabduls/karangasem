@@ -133,7 +133,7 @@
         @endphp
         <div class="relative mb-8">
             @if($latestPost->image)
-            <img src="{{ asset('storage/' . $latestPost->image) }}" alt="{{ $latestPost->title }}" class="w-full h-96 object-cover">
+            <img src="{{ asset('uploads/' . $latestPost->image) }}" alt="{{ $latestPost->title }}" class="w-full h-96 object-cover">
             @endif
             <div class="absolute text-gray-400 inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-8">
                 <h1 class="text-4xl text-white mb-2">{{ $latestPost->title }}</h1>
@@ -158,7 +158,7 @@
             @foreach($postsToShow as $post)
             <div class="bg-white shadow-lg rounded-lg overflow-hidden relative">
                 @if($post->image)
-                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-48 object-cover">
+                <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-48 object-cover">
                 @endif
                 <div class="p-6">
                     <h2 class="text-2xl font-bold mb-2">{{ $post->title }}</h2>

@@ -99,7 +99,7 @@
             <h1 class="text-3xl font-bold mb-4">{{ $post->title }}</h1>
             <span class="inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
             @if($post->image)
-            <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
+            <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
             @endif
             @if($post->youtube_url)
             <div class="mb-4">

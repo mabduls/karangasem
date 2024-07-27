@@ -12,6 +12,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Str;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\Select;
 
 class PostResource extends Resource
@@ -30,7 +31,7 @@ class PostResource extends Resource
                     ->required()
                     ->label('Judul Berita')
                     ->reactive()
-                    ->lazy() // Mengurangi frekuensi update
+                    ->lazy()
                     ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')
                     ->label('Slug')
@@ -70,6 +71,7 @@ class PostResource extends Resource
                     ]),
                 FileUpload::make('image')
                     ->label('Gambar')
+                    ->disk('upload')
                     ->image()
                     ->directory('posts')
                     ->imageEditor(),
@@ -88,6 +90,11 @@ class PostResource extends Resource
                 TextColumn::make('slug')->label('Slug')->sortable()->searchable(),
                 TextColumn::make('category')->label('Kategori Berita')->sortable()->searchable(),
                 TextColumn::make('created_at')->label('Dibuat Pada')->sortable(),
+                ImageColumn::make('image_url')
+                    ->label('Gambar')
+                    ->disk('upload')
+                    ->width(200)
+                    ->height(100),
             ])
             ->filters([
                 //
