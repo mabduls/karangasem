@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('img/pemalang.png') }}" class="h-10" alt="Flowbite Logo" />
@@ -94,19 +94,19 @@
         </div>
     </nav>
 
-    <main class="flex items-center justify-center min-h-screen">
-        <div class="bg-white shadow-lg rounded-lg max-w-2xl mx-auto p-6">
-            <h1 class="text-3xl font-bold mb-4">{{ $post->title }}</h1>
-            <span class="inline-block px-3 py-1 border border-gray-400 text-gray-400 rounded-full mb-4">{{ $post->category }}</span>
+    <main class="flex items-center justify-center min-h-screen p-12 bg-gray-100">
+        <div class="bg-white shadow-lg rounded-lg w-full max-w-6xl p-12">
+            <h1 class="text-5xl font-bold mb-8">{{ $post->title }}</h1>
+            <span class="inline-block px-4 py-2 border border-gray-400 text-gray-400 rounded-full mb-8">{{ $post->category }}</span>
             @if($post->image)
-            <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover rounded mb-4">
+            <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-96 object-cover rounded mb-8">
             @endif
             @if($post->youtube_url)
-            <div class="mb-4">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
+            <div class="mb-8">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
             </div>
             @endif
-            <div class="prose">
+            <div class="prose max-w-none">
                 {!! $post->body !!}
             </div>
         </div>
