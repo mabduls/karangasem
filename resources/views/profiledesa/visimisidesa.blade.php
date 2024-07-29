@@ -82,7 +82,7 @@
                                     <a href="{{ route('Pendidikan') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pendidikan</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kesehatan</a>
+                                    <a href="{{ route('Kesehatan') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kesehatan</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('Agama') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Agama</a>
@@ -105,19 +105,19 @@
     <!-- Main Section Start -->
     <section id="sejarah" class="main-section flex items-center justify-center w-full">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
-            <p class="text-xl text-gray-800 mt-5 mb-2">Visi</p>
-            <p class="text-gray-700 mt-2 mb-2">Visi adalah suatu gambaran yang menantang
+            <p class="text-4xl text-gray-800 mt-5 mb-2 font-bold">Visi: </p>
+            <p class="text-gray-700 mt-2 mb-2 text-lg">Visi adalah suatu gambaran yang menantang
                 tentang keadaan masa depan yang diinginkan dengan melihat potensi dan kebutuhan desa.
                 Penyusunan Visi Desa Karangasem ini dilakukan dengan pendekatan partisipatif, melibatkan
                 pihak-pihak yang berkepentingan di Desa Karangasem seperti pemerintah desa, BPD, tokoh masyarakat,
                 tokoh agama, lembaga masyarakat desa dan masyarakat desa pada umumnya. Pertimbangan kondisi eksternal
                 di desa seperti satuan kerja wilayah pembangunan di Kecamatan. Maka berdasarkan pertimbangan di atas Visi
                 Desa Karangasem adalah:</p>
-            <p class="text-xl font-bold">TERWUJUDNYA DESA KARANGASEM MANDIRI, SEHAT, AMAN, SEJAHTERA, DAN KARIMAH YANG BERBASIS
-                TEKNOLOGI" YANG BERAKHLAQUL</p>
+            <p class="text-lg italic">"TERWUJUDNYA DESA KARANGASEM MANDIRI, SEHAT, AMAN, SEJAHTERA, DAN KARIMAH YANG BERBASIS
+                TEKNOLOGI" YANG BERAKHLAQUL"</p>
             <br>
-            <p class="text-xl text-gray-800 mt-5 mb-2">Misi</p>
-            <p class="text-gray-700 mt-2 mb-2">Misi adalah langkah-langkah yang akan dilakukan guna mewujudkan visi. Sehingga
+            <p class="text-4xl text-gray-800 mt-5 mb-2 font-bold">Misi: </p>
+            <p class="text-gray-700 mt-2 mb-2 text-lg">Misi adalah langkah-langkah yang akan dilakukan guna mewujudkan visi. Sehingga
                 guna mewujudkan visí desa Karangasem, maka telah ditetapkan misi-misi yang memuat sesuatu pernyataan yang harus
                 dilaksanakan oleh desa agar tercapainya visi desa tersebut. Pernyataan visi kemudian dijabarkan ke dalam misi agar
                 dapat di operasionalkan/dikerjakan. Sebagaimana penyusunan visi, misipun dalam penyusunannya menggunakan pendekatan

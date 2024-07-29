@@ -82,7 +82,7 @@
                                     <a href="{{ route('Pendidikan') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pendidikan</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kesehatan</a>
+                                    <a href="{{ route('Kesehatan') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kesehatan</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('Agama') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Agama</a>
@@ -107,32 +107,32 @@
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full text-justify">
             <p class="text-xl text-gray-800 mt-5 mb-2">Pekerjaan</p>
             <p class="text-gray-700 mt-2 mb-2">Jumlah penduduk berdasarkan mata pencaharian</p>
-            <ul class="text-lg text-gray-700 list-decimal list-inside">
-                <li class="flex">
+            <ul class="text-lg text-gray-700 list-disc list-inside">
+                <li>
                     <span class="w-40">Negeri Sipil</span><span>:</span>
                     <span class="ml-2">133 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">TNI / POLRI</span><span>:</span>
                     <span class="ml-2">2 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">Wiraswasta</span><span>:</span>
                     <span class="ml-2">718 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">Tani</span><span>:</span>
                     <span class="ml-2">642 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">Pertukangan</span><span>:</span>
                     <span class="ml-2">71 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">Buruh Tani</span><span>:</span>
                     <span class="ml-2">640 orang</span>
                 </li>
-                <li class="flex">
+                <li>
                     <span class="w-40">Pensiunan</span><span>:</span>
                     <span class="ml-2">20 orang</span>
                 </li>

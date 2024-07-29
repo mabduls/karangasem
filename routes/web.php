@@ -49,6 +49,9 @@ Route::prefix('statistikdesa')->group(function () {
     Route::get('/pendidikan', function () {
         return view('statistikdesa.pendidikan');
     })->name('Pendidikan');
+    Route::get('/kesehatan', function () {
+        return view('statistikdesa.kesehatan');
+    })->name('Kesehatan');
 });
 
 Route::get('/dashboard', [PostController::class, 'index'])->name('UserDashboard');
