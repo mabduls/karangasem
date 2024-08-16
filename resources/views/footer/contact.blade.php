@@ -15,7 +15,7 @@
         <nav class="container flex justify-between items-center py-6 relative">
             <div class="py-5 text-color-secondary font-bold text-4xl">
                 <a href="#home">
-                    <span class="text-color-gray">Desa</span><span class="text-color-gray">Karangasem.</span>
+                    <span class="text-color-gray">Desa</span><span class="text-color-gray">Karangasem</span>
                 </a>
             </div>
             <div>
