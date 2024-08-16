@@ -60,7 +60,7 @@
                 <ul class="hidden lg:flex items-center space-x-8">
                     <li><a href="#home" class="hover:text-color-secondary ease-in duration-200 text-xl">Home</a></li>
                     <li><a href="#features" class="hover:text-color-secondary ease-in duration-200 text-xl">Features</a></li>
-                    <li><a href="#contact" class="hover:text-color-secondary ease-in duration-200 text-xl">Contact</a></li>
+                    <li><a href="#footer" class="hover:text-color-secondary ease-in duration-200 text-xl">About Us</a></li>
                     <li>
                         <a href="{{ route('UserDashboard') }}"><button class="bg-color-secondary px-4 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200 text-xl">Bring It On !!!</button></a>
                     </li>
@@ -171,27 +171,26 @@
                                 di seluruh Indonesia</p>
                             <div class="flex gap-5 items-center">
                                 <p>Follow Us</p>
-                                <i class="fa-brands fa-facebook-f cursor-pointer hover:text-color-secondary"></i>
-                                <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secondary"></i>
-                                <i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary"></i>
-                                <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary"></i>
+                                <a href="https://web.facebook.com/profile.php?id=61563862096354" target="_blank"><i class="fa-brands fa-facebook-f cursor-pointer hover:text-color-secondary"></i></a>
+                                <a href="https://www.youtube.com/@DesaKarangasemPetarukan" target="_blank"><i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary"></i>
+                                <a href="https://www.instagram.com/karangasem.petarukan/" target="_blank"><i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary"></i></a>
                             </div>
                         </div>
                         <div class="flex justify-between md:justify-around">
                             <div class="space-y-6">
                                 <h4 class="font-bold text-lg">Quick Link</h4>
                                 <ul class="space-y-3">
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Home</a></li>
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Features</a></li>
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Footer</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#home">Home</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#features">Features</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#footer">Footer</a></li>
                                 </ul>
                             </div>
                             <div class="space-y-6">
                                 <h4 class="font-bold text-lg">Quick Link</h4>
                                 <ul class="space-y-3">
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">About Us</a></li>
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Contact</a></li>
-                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Terms & Conditions</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="{{ route('AboutUs') }}" target="_blank">About Us</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="{{ route('Contact') }}" target="_blank">Contact</a></li>
+                                    <li class="underline hover:no-underline hover:text-color-secondary"><a href="{{ route('TermsCondition') }}" target="_blank">Terms & Conditions</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -98,7 +98,7 @@
     <!-- Header Section -->
     <section id="header" class="flex flex-col justify-center items-center bg-gray-100 py-10 w-full">
         <div class="text-gray-900 text-center">
-            <p class="text-4xl font-bold">Desa Karangasem</p>
+            <p class="text-4xl font-bold">Sejarah Desa Karangasem</p>
             <p class="text-lg text-gray-600 mt-2">Berkembang bersama dengan desa karangasem Kecamatan Petarukan.</p>
         </div>
     </section>

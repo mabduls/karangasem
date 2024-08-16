@@ -99,16 +99,18 @@
             <h1 class="text-5xl font-bold mb-8">{{ $post->title }}</h1>
             <span class="inline-block px-4 py-2 border border-gray-400 text-gray-400 rounded-full mb-8">{{ $post->category }}</span>
             @if($post->image)
-            <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-100 object-cover rounded mb-8">
-            @endif
-            @if($post->youtube_url)
-            <div class="mb-8">
-                <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ Str::afterLast($post->youtube_url, 'v=') }}" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <img src="{{ asset('uploads/' . $post->image) }}" alt="{{ $post->title }}" class="w-full max-w-md h-auto object-contain rounded mb-8">
             @endif
             <div class="prose max-w-none">
                 {!! $post->body !!}
             </div>
+            <br><br><br>
+            @if($post->youtube_url)
+            <p class="text-4xl font-bold mb-8">Berikut adalah video kegiatan diatas:</p>
+            <div class="mb-8">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ \App\Helpers\YouTubeHelper::extractVideoId($post->youtube_url) }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            @endif
         </div>
     </main>
 </body>

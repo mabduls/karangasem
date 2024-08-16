@@ -5,7 +5,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('WelcomePage');
 
 // Grouping routes under 'profiledesa'
 Route::prefix('profiledesa')->group(function () {
@@ -52,6 +52,19 @@ Route::prefix('statistikdesa')->group(function () {
     Route::get('/kesehatan', function () {
         return view('statistikdesa.kesehatan');
     })->name('Kesehatan');
+});
+
+// Grouping routes under 'Statistik Desa'
+Route::prefix('footer')->group(function () {
+    Route::get('/aboutus', function () {
+        return view('footer.aboutus');
+    })->name('AboutUs');
+    Route::get('/termsandcondition', function () {
+        return view('footer.terms');
+    })->name('TermsCondition');
+    Route::get('/contact', function () {
+        return view('footer.contact');
+    })->name('Contact');
 });
 
 Route::get('/dashboard', [PostController::class, 'index'])->name('UserDashboard');
